@@ -60,7 +60,7 @@ footer {
 
 /* Video Container */
 .video-container {
-    position: right;
+    position: relative;
     flex-shrink: 0; /* Prevent shrinking */
     width: 300px;
     height: 200px;
