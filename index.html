@@ -19,21 +19,47 @@
 <body>
  <!-- Add your image -->
 <!--<img src="https://raw.githubusercontent.com/vkhandelwal14/Vikas_Interactive_CV/main/CSM.jpg" alt="CSM" class="corner-logo">-->
-<section>
+
+ <section>
     <h2>Watch My Introduction</h2>
-    <div class="video-thumbnail-container">
-        <details>
-            <summary>
-                <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail" class="video-thumbnail">
-            </summary>
-            <video width="600" controls class="expanded-video">
-                <source src="Assets/Videos/Archana.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </details>
+    <div class="video-container">
+        <!-- Thumbnail Image -->
+        <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail"
+             class="video-thumbnail" onclick="playVideo()">
+
+        <!-- Video Element -->
+        <video id="introVideo" width="200" controls class="hidden-video"
+               onended="showThumbnail()">
+            <source src="Assets/Videos/Archana.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
 </section>
+<script>
+    function playVideo() {
+        const thumbnail = document.querySelector('.video-thumbnail');
+        const video = document.getElementById('introVideo');
 
+        // Hide the thumbnail and show the video
+        thumbnail.style.display = 'none';
+        video.style.display = 'block';
+
+        // Start the video playback
+        video.play();
+    }
+
+    function showThumbnail() {
+        const thumbnail = document.querySelector('.video-thumbnail');
+        const video = document.getElementById('introVideo');
+
+        // Show the thumbnail and hide the video
+        thumbnail.style.display = 'block';
+        video.style.display = 'none';
+
+        // Reset the video playback to the start
+        video.currentTime = 0;
+    }
+</script>
 <!-- <section>-->
 <!--    <h2>Watch My Introduction</h2>-->
 <!--    <video width="600" controls>-->

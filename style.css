@@ -40,15 +40,16 @@ footer {
     background: #333;
     color: white;
 }
-/* Thumbnail container */
-.video-thumbnail-container {
+
+/* Container for the video and image */
+.video-container {
     position: relative;
-    float: right;
-    margin: 20px;
-    width: 150px;
+    width: 200px;
+    margin: 20px auto;
+    text-align: right;
 }
 
-/* Video thumbnail image */
+/* Thumbnail image styling */
 .video-thumbnail {
     width: 100%;
     cursor: pointer;
@@ -61,16 +62,9 @@ footer {
     transform: scale(1.1);
 }
 
-/* Expanded video styling */
-details video.expanded-video {
-    display: block;
-    margin-top: 10px;
-    border: 1px solid #ddd;
+/* Hide the video by default */
+.hidden-video {
+    display: none;
+    border: 2px solid #ddd;
     border-radius: 8px;
-}
-
-/* Style the <details> summary */
-details summary {
-    list-style: none;
-    cursor: pointer;
 }
