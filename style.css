@@ -44,20 +44,38 @@ footer {
 /* Container for the video and image */
 .video-container {
     position: relative;
-    width: 200px;
+    width: 100px;
     margin: 20px auto;
     text-align: right;
+    overflow: hidden; /* Ensures no overflow outside the container */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
 }
 
 /* Thumbnail image styling */
 .video-thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container neatly */
     cursor: pointer;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
+    transition: opacity 0.3s ease;
 }
 
+/* Video element styling */
+#introVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the container neatly */
+    display: none; /* Hidden by default */
+}
 .video-thumbnail:hover {
     transform: scale(1.1);
 }
