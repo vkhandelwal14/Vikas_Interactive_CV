@@ -20,24 +20,24 @@
  <!-- Add your image -->
 <!--<img src="https://raw.githubusercontent.com/vkhandelwal14/Vikas_Interactive_CV/main/CSM.jpg" alt="CSM" class="corner-logo">-->
 
- <section>
-    <h2>Watch My Introduction</h2>
-    <div class="video-container">
-        <!-- Thumbnail Image -->
-          <!-- Close Button -->
-        <button class="close-btn" onclick="closeVideo()">×</button>
+<!-- <section>--> to be removed 11
+<!--    <h2>Watch My Introduction</h2>-->
+<!--    <div class="video-container">-->
+<!--        &lt;!&ndash; Thumbnail Image &ndash;&gt;-->
+<!--          &lt;!&ndash; Close Button &ndash;&gt;-->
+<!--        <button class="close-btn" onclick="closeVideo()">×</button>-->
 
-        <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail"
-             class="video-thumbnail" onclick="playVideo()">
+<!--        <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail"-->
+<!--             class="video-thumbnail" onclick="playVideo()">-->
 
-        <!-- Video Element -->
-        <video id="introVideo" controls
-               onended="showThumbnail()">
-            <source src="Assets/Videos/Archana.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</section>
+<!--        &lt;!&ndash; Video Element &ndash;&gt;-->
+<!--        <video id="introVideo" controls-->
+<!--               onended="showThumbnail()">-->
+<!--            <source src="Assets/Videos/Archana.mp4" type="video/mp4">-->
+<!--            Your browser does not support the video tag.-->
+<!--        </video>-->
+<!--    </div>-->
+<!--</section>--> to be removed 11
 <script>
     function playVideo() {
         const thumbnail = document.querySelector('.video-thumbnail');
@@ -96,6 +96,21 @@
             <p>350+ to achieve exceptional client satisfaction. Recognized with multiple awards for excellence, skilled in IT governance, digital marketing, and stakeholder engagement to drive business growth and innovation.</p>
             <p>Open to learning new domains and adapting to evolving industry trends to deliver impactful solutions.</p>
         </section>
+        <div class="video-container">
+        <!-- Thumbnail Image -->
+          <!-- Close Button -->
+        <button class="close-btn" onclick="closeVideo()">X</button>
+
+        <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail"
+             class="video-thumbnail" onclick="playVideo()">
+
+        <!-- Video Element -->
+        <video id="introVideo" controls
+               onended="showThumbnail()">
+            <source src="Assets/Videos/Archana.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
         <section>
             <h2>Skills</h2>
             <ul>
