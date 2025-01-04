@@ -97,20 +97,14 @@
             <p>Open to learning new domains and adapting to evolving industry trends to deliver impactful solutions.</p>
         </section>
         <div class="video-container">
+             <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail" class="video-thumbnail" onclick="playVideo()">
+             <video id="introVideo" class="hidden-video" width="100%" height="100%" onended="showThumbnail()">
+            <source src="Assets/Videos/Archana.mp4" type="video/mp4">
         <!-- Thumbnail Image -->
           <!-- Close Button -->
         <button class="close-btn" onclick="closeVideo()">X</button>
-
-        <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail"
-             class="video-thumbnail" onclick="playVideo()">
-
-        <!-- Video Element -->
-        <video id="introVideo" controls
-               onended="showThumbnail()">
-            <source src="Assets/Videos/Archana.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+         </video>
+      </div>
         <section>
             <h2>Skills</h2>
             <ul>
