@@ -24,6 +24,9 @@
     <h2>Watch My Introduction</h2>
     <div class="video-container">
         <!-- Thumbnail Image -->
+          <!-- Close Button -->
+        <button class="close-btn" onclick="closeVideo()">×</button>
+
         <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail"
              class="video-thumbnail" onclick="playVideo()">
 
@@ -43,7 +46,7 @@
         // Hide the thumbnail and show the video
         thumbnail.style.display = 'none';
         video.style.display = 'block';
-
+        closeButton.style.display = 'block';
         // Start the video playback
         video.play();
     }
@@ -55,10 +58,25 @@
         // Show the thumbnail and hide the video
         thumbnail.style.display = 'block';
         video.style.display = 'none';
+         closeButton.style.display = 'none';
 
         // Reset the video playback to the start
         video.currentTime = 0;
     }
+    function closeVideo() {
+    const thumbnail = document.querySelector('.video-thumbnail');
+    const video = document.getElementById('introVideo');
+    const closeButton = document.querySelector('.close-btn');
+
+    // Show the thumbnail, hide the video, and the close button
+    thumbnail.style.display = 'block';
+    video.style.display = 'none';
+    closeButton.style.display = 'none';
+
+    // Pause the video and reset playback
+    video.pause();
+    video.currentTime = 0;
+}
 </script>
 <!-- <section>-->
 <!--    <h2>Watch My Introduction</h2>-->
