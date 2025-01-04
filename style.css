@@ -1,4 +1,4 @@
-body {
+    body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -39,4 +39,38 @@ footer {
     padding: 1rem;
     background: #333;
     color: white;
+}
+/* Thumbnail container */
+.video-thumbnail-container {
+    position: relative;
+    float: right;
+    margin: 20px;
+    width: 150px;
+}
+
+/* Video thumbnail image */
+.video-thumbnail {
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.video-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* Expanded video styling */
+details video.expanded-video {
+    display: block;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Style the <details> summary */
+details summary {
+    list-style: none;
+    cursor: pointer;
 }
