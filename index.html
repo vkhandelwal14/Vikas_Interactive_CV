@@ -24,11 +24,12 @@
     function playVideo() {
         const thumbnail = document.querySelector('.video-thumbnail');
         const video = document.getElementById('introVideo');
+        const closeButton = document.getElementById("closeButton");
 
         // Hide the thumbnail and show the video
         thumbnail.style.display = 'none';
         video.style.display = 'block';
-        closeButton.style.display = 'block';
+        closeButton.style.display = 'block';// Show close button
         // Start the video playback
         video.play();
     }
@@ -36,6 +37,7 @@
     function showThumbnail() {
         const thumbnail = document.querySelector('.video-thumbnail');
         const video = document.getElementById('introVideo');
+        const closeButton = document.getElementById("closeButton");
 
         // Show the thumbnail and hide the video
         thumbnail.style.display = 'block';
@@ -48,17 +50,16 @@
     function closeVideo() {
     const thumbnail = document.querySelector('.video-thumbnail');
     const video = document.getElementById('introVideo');
-    const closeButton = document.querySelector('.close-btn');
+    const closeButton = document.querySelector('.closeButton');
+    video.pause();
+    video.currentTime = 0; // Reset video playback
 
     // Show the thumbnail, hide the video, and the close button
     thumbnail.style.display = 'block';
     video.style.display = 'none';
-    closeButton.style.display = 'none';
+    closeButton.style.display = 'block';// Hide close button
 
-    // Pause the video and reset playback
-    video.pause();
-    video.currentTime = 0;
-}
+   }
 </script>
 <!-- <section>-->
 <!--    <h2>Watch My Introduction</h2>-->
@@ -80,11 +81,12 @@
         </section>
         <div class="video-container">
              <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail" class="video-thumbnail" onclick="playVideo()">
-             <video id="introVideo" class="hidden-video" width="100%" height="100%" onended="showThumbnail()">
+             <video id="introVideo" class="hidden-video" width="100%" height="100%" controls playsinline onended="showThumbnail()">
             <source src="Assets/Videos/Archana.mp4" type="video/mp4">
         <!-- Thumbnail Image -->
           <!-- Close Button -->
-        <button class="close-btn" onclick="closeVideo()">X</button>
+        <button id="closeButton" class="close-button" onclick="closeVideo()">X</button>
+<!--        <button class="close-btn" onclick="closeVideo()">X</button>-->
          </video>
       </div>
         <section>
