@@ -100,22 +100,22 @@ footer {
 }
 
 /* Close Button Styling */
-.close-button {
+.close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ff0000;
-    color: #fff;
+    top: 5px;
+    right: 5px;
+    background-color: #ff4d4d;
+    color: white;
     border: none;
     border-radius: 50%;
     width: 30px;
     height: 30px;
     cursor: pointer;
     font-size: 16px;
-   /* line-height: 30px;*/
+    line-height: 30px;
     text-align: center;
-    display: block; /* Show Always */
-    z-index: 100;
+    display: none; /* Initially hidden */
+    z-index: 10;
 }
 
 .hidden-video {
@@ -126,15 +126,4 @@ footer {
     height: 100%;
     object-fit: cover;
     display: none; /* Initially hidden */
-}
-
-@media (max-width: 768px) {
-    .video-container {
-        width: 100%;
-        height: auto;
-    }
-    .video-thumbnail, .hidden-video {
-        width: 100%;
-        height: auto;
-    }
 }
