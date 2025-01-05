@@ -84,6 +84,10 @@ footer {
     transition: opacity 0.3s ease;
 }
 
+.video-thumbnail:hover {
+    opacity: 0.8; /* Slightly fade the thumbnail on hover */
+}
+
 /* Video Element Styling */
 #introVideo {
     position: absolute;

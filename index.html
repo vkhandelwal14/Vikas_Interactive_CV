@@ -1,127 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vikas Khandelwal Digital CV</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        /* Inline CSS for demonstration, move to style.css for better organization */
-        img.corner-logo {
-            position: absolute; /* Allow positioning */
-            top: 10px; /* Distance from the top */
-            left: 10px; /* Distance from the left */
-            width: 100px; /* Adjust size */
-            height: auto; /* Maintain aspect ratio */
-        }
+      /* Inline CSS for demonstration, move to style.css for better organization */
+      img.corner-logo {
+        position: absolute; /* Allow positioning */
+        top: 10px; /* Distance from the top */
+        left: 10px; /* Distance from the left */
+        width: 100px; /* Adjust size */
+        height: auto; /* Maintain aspect ratio */
+      }
     </style>
-</head>
-<body>
- <!-- Add your image -->
+  </head>
+  <body>
+    <!-- Add your image -->
+    <!--<img src="https://raw.githubusercontent.com/vkhandelwal14/Vikas_Interactive_CV/main/CSM.jpg" alt="CSM" class="corner-logo">-->
 
-<script>
-    function playVideo() {
-        const thumbnail = document.querySelector('.video-thumbnail');
-        const video = document.getElementById('introVideo');
-        const closeButton = document.getElementById("closeButton");
-
-        // Hide the thumbnail and show the video
-        thumbnail.style.display = 'none';
-        video.style.display = 'block';
-        closeButton.style.display = 'block';// Show close button
-        // Start the video playback
-        video.play();
-    }
-
-    function showThumbnail() {
-        const thumbnail = document.querySelector('.video-thumbnail');
-        const video = document.getElementById('introVideo');
-        const closeButton = document.getElementById("closeButton");
-
-        // Show the thumbnail and hide the video
-        thumbnail.style.display = 'block';
-        video.style.display = 'none';
-         closeButton.style.display = 'none';
-
-        // Reset the video playback to the start
-        video.currentTime = 0;
-    }
-    function closeVideo() {
-    const thumbnail = document.querySelector('.video-thumbnail');
-    const video = document.getElementById('introVideo');
-    const closeButton = document.querySelector('.closeButton');
-    video.pause();
-    video.currentTime = 0; // Reset video playback
-
-    // Show the thumbnail, hide the video, and the close button
-    thumbnail.style.display = 'block';
-    video.style.display = 'none';
-    closeButton.style.display = 'block';// Hide close button
-
-   }
-</script>
-<!-- <section>-->
-<!--    <h2>Watch My Introduction</h2>-->
-<!--    <video width="600" controls>-->
-<!--        <source src="Assets/Videos/Archana.mp4" type="video/mp4">-->
-<!--    </video>-->
-<!--</section>-->
+    <!-- <section>-->
+    <!--    <h2>Watch My Introduction</h2>-->
+    <!--    <video width="600" controls>-->
+    <!--        <source src="Assets/Videos/Archana.mp4" type="video/mp4">-->
+    <!--    </video>-->
+    <!--</section>-->
     <header>
-        <h1>Vikas Khandelwal</h1>
-        <p>Delivery manager| #8919256845| vkhandelwal14@yahoo.com| <a href="https://www.linkedin.com/in/vikaskhandelwal/">LinkedIn</a> | <a href="https://github.com/vkhandelwal14">GitHub</a></p>
+      <h1>Vikas Khandelwal</h1>
+      <p>
+        Delivery manager| #8919256845| vkhandelwal14@yahoo.com|
+        <a href="https://www.linkedin.com/in/vikaskhandelwal/">LinkedIn</a> |
+        <a href="https://github.com/vkhandelwal14">GitHub</a>
+      </p>
     </header>
     <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Seasoned IT leader and CSM-certified professional with 23+ years of expertise in Quality Engineering & automation, Portfolio management, Agile implementation, and Digital transformation in BFSI.</p>
-            <p>Proven history of delivering multi-million-dollar programs on time, driving AI/ML-led testing optimization (20% efficiency gain), spearheaded Gen AI initiatives in quality assurance,lead teams of </p>
-            <p>350+ to achieve exceptional client satisfaction. Recognized with multiple awards for excellence, skilled in IT governance, digital marketing, and stakeholder engagement to drive business growth and innovation.</p>
-            <p>Open to learning new domains and adapting to evolving industry trends to deliver impactful solutions.</p>
-        </section>
-        <div class="video-container">
-             <img src="Assets/Images/Vikas.jpg" alt="Video Thumbnail" class="video-thumbnail" onclick="playVideo()">
-             <video id="introVideo" class="hidden-video" width="100%" height="100%" controls playsinline onended="showThumbnail()">
-            <source src="Assets/Videos/Archana.mp4" type="video/mp4">
+      <section>
+        <h2>About Me</h2>
+        <p>
+          Seasoned IT leader and CSM-certified professional with 23+ years of
+          expertise in Quality Engineering & automation, Portfolio management,
+          Agile implementation, and Digital transformation in BFSI.
+        </p>
+        <p>
+          Proven history of delivering multi-million-dollar programs on time,
+          driving AI/ML-led testing optimization (20% efficiency gain),
+          spearheaded Gen AI initiatives in quality assurance,lead teams of
+        </p>
+        <p>
+          350+ to achieve exceptional client satisfaction. Recognized with
+          multiple awards for excellence, skilled in IT governance, digital
+          marketing, and stakeholder engagement to drive business growth and
+          innovation.
+        </p>
+        <p>
+          Open to learning new domains and adapting to evolving industry trends
+          to deliver impactful solutions.
+        </p>
+      </section>
+      <div class="video-container">
+        <img
+          src="Assets/Images/Vikas.jpg"
+          alt="Video Thumbnail"
+          class="video-thumbnail"
+          onclick="playVideo()"
+        />
+        <video
+          id="introVideo"
+          class="hidden-video"
+          width="100%"
+          height="100%"
+          onended="showThumbnail()"
+        >
+          <source src="Assets/Videos/Archana.mp4" type="video/mp4" />
+        </video>
         <!-- Thumbnail Image -->
-          <!-- Close Button -->
-        <button id="closeButton" class="close-button" onclick="closeVideo()">X</button>
-<!--        <button class="close-btn" onclick="closeVideo()">X</button>-->
-         </video>
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closeVideo()">X</button>
       </div>
-        <section>
-            <h2>Skills</h2>
-            <ul>
-                <li>Technical skills: QA Automation, Gen AI, AI/ML</li>
-                <li>Frameworks: Global Service Delivery management, Enterprise project management </li>
-                <li>          : Strategic Planning, AIML/CICD implementation, Progressive automation </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Experience of 20+ years</h2>
-            <p><strong>Job Title</strong> -Infosys Limited (May 08 - Till date)</p>
-            <ul>
-                <li><strong>Delivery Risk Management</strong>: Expertise in tracking and managing delivery risks, leading quality and continuous improvement initiatives to transform high-risk projects into low-risk successes.</li>
-                <li><strong>Comprehensive Account & Delivery Management</strong>: Proficient in end-to-end account and delivery management for Operations and Solution Delivery projects across the Business Unit.</li>
-                <li><strong>Metrics & KPI Management: </strong>:Skilled in facilitating organizational metrics, SLA, and KPI measurement initiatives, baselining capabilities, and tracking trends for continuous improvement.</li>
-                <li><strong>Strategic focus on Productivity & People Management</strong>: Support strategic positioning for growth, productivity improvement and effective people management within the account.</li>
-               	<li><strong>Client & Leadership Engagement</strong>: Conduct monthly service reviews and evolution forums with clients and leadership, ensuring proactive problem management, change management, and incident resolution.</li>
-                <li><strong>Operational Excellence</strong>: Establish and implement quality systems and procedures to facilitate a high-quality customer experience while adhering to SLAs.</li>
-                <li><strong>Strategic Business Insights</strong>: Provide strategic insights to boost business through process improvement and capacity building.</li>
-                <li><strong>Practice & Solution Development</strong>: Lead practice and solution development, relationship management, and project delivery across various domains.</li>
-                <li><strong>Team Leadership & Innovation</strong>: Direct, supervise, and manage a team of innovators, coaching them to conceptualize, design, and implement actionable business and technical solutions.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="https://github.com/yourproject1">Project 1</a>: A brief description of the project.</li>
-                <li><a href="https://github.com/yourproject2">Project 2</a>: A brief description of the project.</li>
-            </ul>
-        </section>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>Technical skills: QA Automation, Gen AI, AI/ML</li>
+          <li>
+            Frameworks: Global Service Delivery management, Enterprise project
+            management
+          </li>
+          <li>
+            : Strategic Planning, AIML/CICD implementation, Progressive
+            automation
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Experience of 20+ years</h2>
+        <p><strong>Job Title</strong> -Infosys Limited (May 08 - Till date)</p>
+        <ul>
+          <li>
+            <strong>Delivery Risk Management</strong>: Expertise in tracking and
+            managing delivery risks, leading quality and continuous improvement
+            initiatives to transform high-risk projects into low-risk successes.
+          </li>
+          <li>
+            <strong>Comprehensive Account & Delivery Management</strong>:
+            Proficient in end-to-end account and delivery management for
+            Operations and Solution Delivery projects across the Business Unit.
+          </li>
+          <li>
+            <strong>Metrics & KPI Management: </strong>:Skilled in facilitating
+            organizational metrics, SLA, and KPI measurement initiatives,
+            baselining capabilities, and tracking trends for continuous
+            improvement.
+          </li>
+          <li>
+            <strong>Strategic focus on Productivity & People Management</strong
+            >: Support strategic positioning for growth, productivity
+            improvement and effective people management within the account.
+          </li>
+          <li>
+            <strong>Client & Leadership Engagement</strong>: Conduct monthly
+            service reviews and evolution forums with clients and leadership,
+            ensuring proactive problem management, change management, and
+            incident resolution.
+          </li>
+          <li>
+            <strong>Operational Excellence</strong>: Establish and implement
+            quality systems and procedures to facilitate a high-quality customer
+            experience while adhering to SLAs.
+          </li>
+          <li>
+            <strong>Strategic Business Insights</strong>: Provide strategic
+            insights to boost business through process improvement and capacity
+            building.
+          </li>
+          <li>
+            <strong>Practice & Solution Development</strong>: Lead practice and
+            solution development, relationship management, and project delivery
+            across various domains.
+          </li>
+          <li>
+            <strong>Team Leadership & Innovation</strong>: Direct, supervise,
+            and manage a team of innovators, coaching them to conceptualize,
+            design, and implement actionable business and technical solutions.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/yourproject1">Project 1</a>: A brief
+            description of the project.
+          </li>
+          <li>
+            <a href="https://github.com/yourproject2">Project 2</a>: A brief
+            description of the project.
+          </li>
+        </ul>
+      </section>
     </main>
     <footer>
-        <p>&copy; 2024 Your Name</p>
+      <p>&copy; 2024 Your Name</p>
     </footer>
-</body>
-</html>
+    <script>
+      // Play video when thumbnail is clicked
+      function playVideo() {
+        const thumbnail = document.querySelector(".video-thumbnail");
+        const video = document.getElementById("introVideo");
+        const closeButton = document.querySelector(".close-btn");
 
+        // Hide the thumbnail and show the video
+        thumbnail.style.display = "none";
+        video.style.display = "block";
+        closeButton.style.display = "block";
+        video.play();
+      }
+
+      // Show thumbnail again after video ends
+      function showThumbnail() {
+        const thumbnail = document.querySelector(".video-thumbnail");
+        const video = document.getElementById("introVideo");
+        const closeButton = document.querySelector(".close-btn");
+
+        // Show the thumbnail and hide the video
+        thumbnail.style.display = "block";
+        video.style.display = "none";
+        closeButton.style.display = "none";
+
+        // Reset video playback
+        video.currentTime = 0;
+      }
+
+      // Close video and show the thumbnail
+      function closeVideo() {
+        const thumbnail = document.querySelector(".video-thumbnail");
+        const video = document.getElementById("introVideo");
+        const closeButton = document.querySelector(".close-btn");
+
+        // Show the thumbnail and hide the video
+        thumbnail.style.display = "block";
+        video.style.display = "none";
+        closeButton.style.display = "none";
+
+        // Pause the video and reset playback
+        video.pause();
+        video.currentTime = 0;
+      }
+    </script>
+  </body>
+</html>
