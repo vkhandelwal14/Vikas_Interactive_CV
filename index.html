@@ -125,10 +125,3 @@
 </body>
 </html>
 
-chrome.runtime.sendMessage({ type: "fetchData" }, (response) => {
-    if (chrome.runtime.lastError) {
-        console.error("Error:", chrome.runtime.lastError.message);
-    } else {
-        console.log("Response from background:", response);
-    }
-});
