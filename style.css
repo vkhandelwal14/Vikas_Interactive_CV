@@ -41,7 +41,7 @@ footer {
     color: white;
 }
 
-/* Flexbox Container for About Me and Video */
+/* Flexbox Container for About Me and Video for Vikas */
 .about-me-section {
     display: flex;
     justify-content: space-between;
