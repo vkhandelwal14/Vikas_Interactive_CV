@@ -63,15 +63,17 @@
           class="video-thumbnail"
           onclick="playVideo()"
         />
-        <video
+        <iframe
           id="introVideo"
-          class="hidden-video"
+          class="hidden-iframe"
           width="100%"
           height="100%"
-          onended="showThumbnail()"
-        >
-          <source src="Assets/Videos/Archana.mp4" type="video/mp4" />
-        </video>
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        
         <!-- Thumbnail Image -->
         <!-- Close Button -->
         <button class="close-btn" onclick="closeVideo()">X</button>
